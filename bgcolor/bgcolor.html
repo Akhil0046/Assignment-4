@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            text-align: center;
+            margin: 6% auto;
+        }
+        #clr
+        {
+            padding: 5px 50px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hello,World!</h1>
+    <h3>What color</h3>
+    <select name="" id="clr" onchange="change()">
+      <option value="">Select color</option>
+      <option value="Red">Red</option>
+      <option value="blue">blue</option>
+      <option value="orange">orange</option>
+      <option value="yellow">yellow</option>
+    </select>
+
+    <script>
+   function change() 
+   {
+      var s = document.getElementById('clr').selectedIndex;
+      if (s>0) 
+      {
+          var s1 = document.getElementById('clr').options[s].value;
+          document.body.style.backgroundColor = s1;
+      }   
+      else
+      {
+          alert("please select a color")
+      }
+   }
+    </script>
+</body>
+</html>

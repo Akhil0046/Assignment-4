@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div
+        {
+            text-align: center;
+            margin-top: 150px;
+        }
+        input
+        {
+            font-size: 100px;
+            text-align: center;
+            width: 260px;
+            height: 200px;
+            color: hotpink;
+        }
+        .btn
+        {
+            padding: 20px 33px;
+            font-size: xx-large;
+        }
+        #Add
+        {
+            background-color: green;
+            border: none;
+        }
+        #reset
+        {
+            background-color: orange;
+            border: none;
+        }
+        #subtract
+        {
+            background-color: red;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" value="0" > <br>
+        <button class="btn" id="Add">+</button>
+        <button class="btn" id="reset"><img width="30px" height="30px" src="./images/reset.jfif" alt=""></button>
+        <button class="btn" id="subtract">-</button>
+    </div>
+
+    <script>
+        let add = document.querySelector("#Add")
+        let sub = document.querySelector("#subtract")
+        let reset = document.querySelector("#reset")
+        let input = document.querySelector("input")
+
+
+        add.addEventListener('click', () =>{
+            input.value=parseInt(input.value) + 1;
+        })
+
+        
+        sub.addEventListener('click', () =>{
+            input.value=parseInt(input.value) - 1;
+        })
+        
+
+        reset.addEventListener('click', () =>{
+            input.value=parseInt(input.value) *0 ;
+        })
+    </script>
+</body>
+</html>
